@@ -42,12 +42,7 @@ const App = () => {
 
 
     
-    // Create the animation
-<<<<<<< HEAD
-    const dur = 13000; // 7 seconds
-=======
     const dur = 13400; // 7 seconds
->>>>>>> 13a45b9 (canva)
     const endScale = 1;
     const fps = 60;
     const frameTime = 1000 / fps;
@@ -206,11 +201,7 @@ const App = () => {
     let progress = 0;
 
     function updateLoadingProgress() {
-<<<<<<< HEAD
       progress += 0.01 / 7.4;
-=======
-      progress += 0.01 / 8;
->>>>>>> 13a45b9 (canva)
 
       const angle = progress * Math.PI * 2;
 
