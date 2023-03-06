@@ -210,9 +210,9 @@ const Control = () => {
       <div className="con">
         <div className="box">
           <FontAwesomeIcon
+          className="plus"
             onClick={() => setShow(!show)}
             style={{
-              backgroundColor: "#282621",
               color: "black",
               fontSize: "23px",
               position: "absolute",
@@ -243,6 +243,7 @@ const Control = () => {
             <div className="wrapper">
               <div className="multiplier" >{value.toFixed(2)}</div>
               <FontAwesomeIcon
+              className="inc"
                 onClick={handleIncrement}
                 style={{
                   backgroundColor: "black",
@@ -253,6 +254,7 @@ const Control = () => {
                 icon={faPlusSquare}
               />
               <FontAwesomeIcon
+              className="inc"
                 onClick={handleDecrement}
                 style={{
                   backgroundColor: "black",
@@ -265,41 +267,32 @@ const Control = () => {
               />
             </div>
           <div className="buttons">
-            <Button
-              variant="secondary"
+            <button
               onClick={() => handleValueButton(1)}
-              id="one"
-              className="primary"
-              size="sm"
+              className="dollar"
+              variant="secondary"
             >
               1$
-            </Button>
-            <Button
-              variant="secondary"
+            </button>
+            <button
               onClick={() => handleValueButton(2)}
-              className="primary"
-              size="sm"
+              className="dollar"
             >
               2$
-            </Button>
+            </button><br/>
             <div className="third">
-              <Button
-                variant="secondary"
+              <button className="dollar"
                 onClick={() => handleValueButton(5)}
-                className="primary"
-                size="sm"
               >
                 5$
-              </Button>
-              <Button
-                variant="secondary"
+              </button>
+              <button
                 onClick={() => handleValueButton(10)}
-                className="primary"
-                size="sm"
+                className="dollar"
               >
                 10$
-              </Button>
-            </div>
+              </button>
+              </div>
           </div>
         </div>
         {show && (
@@ -339,6 +332,7 @@ const Control = () => {
               <div className="wrapper">
                 <div className="multiplier">{value2.toFixed(2)}</div>
                 <FontAwesomeIcon
+                className="inc"
                   onClick={handleIncrement2}
                   style={{
                     backgroundColor: "black",
@@ -349,6 +343,7 @@ const Control = () => {
                   icon={faPlusSquare}
                 />
                 <FontAwesomeIcon
+                className="inc"
                   onClick={handleDecrement2}
                   style={{
                     backgroundColor: "black",

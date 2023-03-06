@@ -13,15 +13,13 @@ body {
 }
 canvas{
   border-radius: 15px;
-  margin: 10px 20px;
+  margin-top: 0.3em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 @media (max-width: 450px) {
   canvas{
-    width: 400;
+    width: 380px;
+margin: 0 13px;
   }
-}
+}  

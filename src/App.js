@@ -12,12 +12,14 @@ const App = () => {
 
   useEffect(() => {
     const app = new PIXI.Application({
-      width: 850,
-      height: 450,
+      width: 865,
+      height:450,
       backgroundColor: 0x0e0e0e,
     });
     appRef.current = app;
     document.body.appendChild(app.view);
+
+   
     let countdown = 15;
 
     let value = 1.0;
@@ -37,9 +39,15 @@ const App = () => {
     
     // Add the rectangle to the stage
     app.stage.addChild(rect);
+
+
     
     // Create the animation
+<<<<<<< HEAD
     const dur = 13000; // 7 seconds
+=======
+    const dur = 13400; // 7 seconds
+>>>>>>> 13a45b9 (canva)
     const endScale = 1;
     const fps = 60;
     const frameTime = 1000 / fps;
@@ -148,10 +156,7 @@ const App = () => {
           image.x -= xVel;
           angle -= frequency;
           gsap.to(image, { alpha: 0, delay: 2 });
-          setTimeout(() => {
-          window.location.reload()
-          }, 5000); // Reload the page after 2 seconds
-        
+         
         }
       }
 
@@ -171,6 +176,8 @@ const App = () => {
       }, 13500);
     }
     imageCall();
+
+   
 
     const loadingCircle = new Graphics();
     loadingCircle.lineStyle(5, 0xffffff, 1);
@@ -199,7 +206,11 @@ const App = () => {
     let progress = 0;
 
     function updateLoadingProgress() {
+<<<<<<< HEAD
       progress += 0.01 / 7.4;
+=======
+      progress += 0.01 / 8;
+>>>>>>> 13a45b9 (canva)
 
       const angle = progress * Math.PI * 2;
 
@@ -238,6 +249,7 @@ const App = () => {
     gsap.to(num, { duration: 3, alpha: 1, delay: 13 });
 
     let main = point + 0.001;
+  
     //console.log(main)
 
     const xline = new PIXI.Graphics();
