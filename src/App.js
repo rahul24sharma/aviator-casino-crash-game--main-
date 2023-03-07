@@ -12,14 +12,12 @@ const App = () => {
 
   useEffect(() => {
     const app = new PIXI.Application({
-      width: 865,
-      height:450,
+      width: 850,
+      height: 450,
       backgroundColor: 0x0e0e0e,
     });
     appRef.current = app;
     document.body.appendChild(app.view);
-
-   
     let countdown = 15;
 
     let value = 1.0;
@@ -39,10 +37,9 @@ const App = () => {
     
     // Add the rectangle to the stage
     app.stage.addChild(rect);
-
-
     
-    const dur = 13400; // 7 seconds
+    // Create the animation
+    const dur = 12800; // 7 seconds
     const endScale = 1;
     const fps = 60;
     const frameTime = 1000 / fps;
@@ -150,8 +147,7 @@ const App = () => {
         if (value >= main) {
           image.x -= xVel;
           angle -= frequency;
-          gsap.to(image, { alpha: 0, delay: 2 });
-         
+          gsap.to(image, { alpha: 0, delay: 2 });        
         }
       }
 
@@ -171,8 +167,6 @@ const App = () => {
       }, 13500);
     }
     imageCall();
-
-   
 
     const loadingCircle = new Graphics();
     loadingCircle.lineStyle(5, 0xffffff, 1);
@@ -240,7 +234,6 @@ const App = () => {
     gsap.to(num, { duration: 3, alpha: 1, delay: 13 });
 
     let main = point + 0.001;
-  
     //console.log(main)
 
     const xline = new PIXI.Graphics();
@@ -326,4 +319,3 @@ function getCrashPoint() {
 const point = getCrashPoint();
 console.log(point);
 export { point };
-

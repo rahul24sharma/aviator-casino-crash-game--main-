@@ -268,7 +268,8 @@
 @media (max-width: 600px) {
   .con{
     position: absolute;
-    top: -12em;
+    left: 10px;
+    top: -16.7em;
     width: 350px;
     border-radius: 5px;
     height: 100px;
